@@ -27,22 +27,3 @@ class NativeDictionary:
                 return self.slots[i]
 
         return None
-
-aa = NativeDictionary(4)
-print(aa)
-print(aa.hash_fun("sddddddddddddd"))
-
-print(8 % 4)
-
-aa.put("star", 1)
-aa.put("s", 2)
-aa.put("sta", 4)
-aa.put("st", 3)
-aa.put("sfa", 34)
-
-print("is key", aa.is_key("star"))
-
-print("get", aa.get("starf"))
-
-print(aa.slots)
-print(aa.values)
