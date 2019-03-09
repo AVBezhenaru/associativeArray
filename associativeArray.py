@@ -6,11 +6,11 @@ class NativeDictionary:
 
     def hash_fun(self, key):
          index = len(key) % self.size
-         self.values[index] = key
          return index
 
     def is_key(self, key):
         for i in range(self.size):
+            print("i", i)
             if self.values[i] == key:
                 return True
 
@@ -19,7 +19,7 @@ class NativeDictionary:
     def put(self, key, value):
         index = self.hash_fun(key)
         self.slots[index] = value
-
+        self.values[index] = key
 
     def get(self, key):
         for i in range(self.size):
